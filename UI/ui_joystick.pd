@@ -1,0 +1,14 @@
+#N canvas 232 68 442 458 10;
+#X obj 101 102 cnv 15 118 15 empty empty JOYSTICK 40 8 0 14 -233017
+-66577 0;
+#X obj 100 119 cnv 15 118 123 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 114 125 hsl 90 110 0 127 0 0 empty empty empty -2 -8 0 10 -99865
+-262144 -1 0 1;
+#X obj 147 124 vsl 20 110 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-4160 -1 5200 1;
+#X floatatom 94 363 5 0 0 0 - - -, f 5;
+#X floatatom 178 356 5 0 0 0 - - -, f 5;
+#X connect 2 0 4 0;
+#X connect 3 0 5 0;
+#X coords 0 -1 1 1 120 140 1 100 100;

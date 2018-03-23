@@ -1,0 +1,42 @@
+#N canvas 172 22 1200 699 10;
+#X declare -path ../;
+#X obj 35 131 cnv 15 1020 576 empty empty empty 20 12 0 14 -41876 -262144
+0;
+#N canvas 0 22 1280 699 input-output 0;
+#X obj 101 101 cnv 15 1019 78 empty empty 1-synsynsyn 400 30 0 34 -21525
+-249661 0;
+#N canvas 406 214 450 300 close 0;
+#X obj 103 169 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 101 101 hradio 28 1 0 2 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 102 102 cnv 15 54 26 empty empty Quitter 3 12 0 12 -233017 -66577
+0;
+#X obj 91 48 inlet;
+#X msg 104 193 \; pd-example/example2.pd menuclose \;;
+#X connect 0 0 4 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 0;
+#X coords 0 -1 1 1 58 30 1 100 100;
+#X restore 1053 205 pd close;
+#X obj 949 46 declare -path ../;
+#X obj 404 428 audio/4_sync_loop 1;
+#X obj 535 567 dac~;
+#X obj 535 543 *~ 1;
+#X obj 859 513 audio/tempo;
+#X obj 543 428 audio/4_sync_loop 2;
+#X obj 696 427 audio/4_sync_loop 3;
+#X obj 518 148 cnv 15 170 30 empty empty Niveau:0 20 15 0 28 -233017
+-66577 0;
+#X obj 104 149;
+#X connect 3 0 5 0;
+#X connect 5 0 4 0;
+#X connect 5 0 4 1;
+#X connect 7 0 5 0;
+#X connect 8 0 5 0;
+#X coords 0 -1 1 1 1020 80 2 100 100;
+#X restore 35 48 pd input-output;
+#X obj 283 171 UI/ui_4_sync_loop 1;
+#X obj 35 711 UI/ui_tempo;
+#X obj 461 171 UI/ui_4_sync_loop 2;
+#X obj 629 172 UI/ui_4_sync_loop 3;

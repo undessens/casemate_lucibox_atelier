@@ -1,0 +1,66 @@
+#N canvas 88 62 1140 660 10;
+#X declare -path ../;
+#N canvas 88 108 1280 699 input-output 0;
+#X obj 101 101 cnv 15 798 78 empty empty Boucle-Batterie 260 20 0 34
+-21525 -262144 0;
+#N canvas 406 214 450 300 close 0;
+#X obj 103 169 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 101 101 hradio 28 1 0 2 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 102 102 cnv 15 54 26 empty empty Quitter 3 12 0 12 -233017 -66577
+0;
+#X obj 91 48 inlet;
+#X msg 104 193 \; pd-example/example2.pd menuclose \;;
+#X connect 0 0 4 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 0;
+#X coords 0 -1 1 1 58 30 1 100 100;
+#X restore 1053 205 pd close;
+#X obj 535 567 dac~;
+#X obj 535 543 *~ 1;
+#X obj 471 191 arduino/arduino_in;
+#X obj 675 507 audio/tempo;
+#X obj 239 190 extra/keyboard;
+#X obj 516 147 cnv 15 170 30 empty empty Montage:2 10 15 0 28 -233017
+-66577 0;
+#X obj 867 56 declare -path ../;
+#X obj 552 453 audio/recloopsave 1 1;
+#X msg 675 479 0;
+#X obj 401 412 audio/4_free_sound 2;
+#X obj 346 147 cnv 15 170 30 empty empty Niveau:1 20 15 0 28 -233017
+-66577 0;
+#X obj 37 201 arduino/arduino;
+#X obj 834 341 extra/analog4button;
+#X obj 618 621 arduino/arduino_out;
+#X connect 3 0 2 0;
+#X connect 3 0 2 1;
+#X connect 4 0 14 0;
+#X connect 4 6 11 1;
+#X connect 4 7 11 2;
+#X connect 4 8 11 3;
+#X connect 4 9 11 4;
+#X connect 4 12 9 1;
+#X connect 4 13 9 2;
+#X connect 6 6 11 1;
+#X connect 6 7 11 2;
+#X connect 6 8 11 3;
+#X connect 6 9 11 4;
+#X connect 9 0 3 0;
+#X connect 9 1 15 2;
+#X connect 9 2 15 1;
+#X connect 9 3 10 0;
+#X connect 10 0 5 0;
+#X connect 11 0 3 0;
+#X connect 11 0 9 0;
+#X connect 14 0 11 6;
+#X coords 0 -1 1 1 800 80 2 100 100;
+#X restore 252 130 pd input-output;
+#X obj 247 568 UI/ui_tempo_small;
+#X obj 564 221 cnv 15 550 300 empty empty empty 20 12 0 14 -204217
+-66577 0;
+#X obj 8 221 cnv 15 550 300 empty empty empty 20 12 0 14 -125737 -66577
+0;
+#X obj 28 357 UI/ui_recloopsave 1 1;
+#X obj 988 235 UI/ui_song_choice;
+#X obj 570 381 UI/ui_4_free_sound 2;

@@ -1,0 +1,60 @@
+#N canvas 139 59 1172 701 10;
+#X declare -path ../;
+#N canvas 101 56 1280 699 input-output 0;
+#X obj 101 101 cnv 15 798 78 empty empty Boucle-Synthetiseur 260 20
+0 34 -21525 -262144 0;
+#N canvas 406 214 450 300 close 0;
+#X obj 103 169 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 101 101 hradio 28 1 0 2 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 102 102 cnv 15 54 26 empty empty Quitter 3 12 0 12 -233017 -66577
+0;
+#X obj 91 48 inlet;
+#X msg 104 193 \; pd-example/example2.pd menuclose \;;
+#X connect 0 0 4 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 0;
+#X coords 0 -1 1 1 58 30 1 100 100;
+#X restore 1053 205 pd close;
+#X obj 535 567 dac~;
+#X obj 535 543 *~ 1;
+#X obj 471 191 arduino/arduino_in;
+#X obj 859 513 audio/tempo;
+#X obj 240 189 extra/keyboard;
+#X obj 381 147 cnv 15 170 30 empty empty Niveau:1 20 15 0 28 -233017
+-66577 0;
+#X obj 867 56 declare -path ../;
+#X obj 556 448 audio/recloopsave 1 1;
+#X msg 680 476 0;
+#X obj 376 411 synth/synthe_piThing;
+#X obj 558 147 cnv 15 170 30 empty empty Montage:3 10 15 0 28 -233017
+-66577 0;
+#X obj 32 191 arduino/arduino;
+#X obj 369 306 extra/analog4button;
+#X connect 3 0 2 0;
+#X connect 3 0 2 1;
+#X connect 4 0 14 0;
+#X connect 4 1 11 6;
+#X connect 4 2 11 5;
+#X connect 4 6 11 0;
+#X connect 4 7 11 1;
+#X connect 4 8 11 2;
+#X connect 4 9 11 3;
+#X connect 9 0 3 0;
+#X connect 9 3 10 0;
+#X connect 10 0 5 0;
+#X connect 11 0 3 0;
+#X connect 11 0 9 0;
+#X connect 14 0 11 4;
+#X coords 0 -1 1 1 800 80 2 100 100;
+#X restore 121 87 pd input-output;
+#X obj 206 589 UI/ui_tempo_small;
+#X obj 563 192 cnv 15 550 300 empty empty empty 20 12 0 14 -204217
+-66577 0;
+#X obj 7 192 cnv 15 550 300 empty empty empty 20 12 0 14 -125737 -66577
+0;
+#X obj 82 344 UI/ui_recloopsave 1 1;
+#X obj 574 387 UI/ui_4_midinote;
+#X obj 986 242 UI/ui_chord_choice;
+#X obj 566 239 UI/ui_joystick;

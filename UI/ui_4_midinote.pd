@@ -1,0 +1,8 @@
+#N canvas 376 106 656 307 10;
+#X obj 101 119 ui_midinote 1;
+#X obj 101 101 cnv 15 420 15 empty empty SYNTHETISEUR 155 8 0 14 -233017
+-66577 0;
+#X obj 208 119 ui_midinote 2;
+#X obj 314 119 ui_midinote 3;
+#X obj 419 119 ui_midinote 4;
+#X coords 0 -1 1 1 422 105 1 100 100;

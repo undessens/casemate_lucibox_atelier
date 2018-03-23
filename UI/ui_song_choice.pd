@@ -1,0 +1,78 @@
+#N canvas 608 107 924 697 10;
+#X obj 101 102 cnv 15 118 15 empty empty STYLE 40 8 0 14 -233017 -66577
+0;
+#X obj 160 302 i 0;
+#X obj 551 459 bang;
+#X obj 109 442 t f b f b;
+#X floatatom 129 373 5 0 0 0 - - -, f 5;
+#X obj 109 505 pack 11 0 0 0;
+#X msg 109 477 22;
+#X obj 101 121 cnv 15 118 118 empty empty empty 20 12 0 14 -128992
+-66577 0;
+#X obj 178 130 hradio 20 1 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 150 170 hradio 20 1 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 112 209 hradio 20 1 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 180 207 hradio 20 1 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 113 127 hradio 20 1 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 168 125 cnv 15 37 37 empty song_selected_1 empty 20 12 0 14
+-128992 -262144 0;
+#X obj 179 129 cnv 15 23 23 empty empty 2 8 12 0 14 -4034 -66577 0
+;
+#X obj 141 160 cnv 15 37 37 empty song_selected_2 empty 20 12 0 14
+-1 -262144 0;
+#X obj 169 196 cnv 15 37 37 empty song_selected_4 empty 20 12 0 14
+-128992 -262144 0;
+#X obj 148 165 cnv 15 23 23 empty empty 3 8 12 0 14 -262144 -1 0;
+#X obj 108 124 cnv 15 37 37 empty song_selected_0 empty 20 12 0 14
+-128992 -262144 0;
+#X obj 106 198 cnv 15 37 37 empty song_selected_3 empty 20 12 0 14
+-128992 -262144 0;
+#X obj 176 202 cnv 15 23 23 empty empty 5 8 12 0 14 -257985 -66577
+0;
+#X obj 113 204 cnv 15 23 23 empty empty 4 8 12 0 14 -258113 -66577
+0;
+#X obj 115 129 cnv 15 23 23 empty empty 1 8 12 0 14 -4160 -262144 0
+;
+#X msg 43 160 0;
+#X msg 308 161 1;
+#X msg 292 196 2;
+#X msg 62 236 3;
+#X msg 263 236 4;
+#X msg 109 536 \; song_selected_\$4 color \$1 \$2 \$3;
+#X msg 388 485 \; song_selected_0 color 11 0 0;
+#X msg 388 524 \; song_selected_2 color 11 0 0;
+#X msg 381 568 \; song_selected_3 color 11 0 0;
+#X msg 568 485 \; song_selected_1 color 11 0 0;
+#X msg 568 525 \; song_selected_4 color 11 0 0;
+#X obj 129 395 - 1;
+#X obj 129 347 ../extra/sv style;
+#X connect 1 0 35 1;
+#X connect 2 0 32 0;
+#X connect 2 0 31 0;
+#X connect 2 0 30 0;
+#X connect 2 0 29 0;
+#X connect 2 0 33 0;
+#X connect 3 1 6 0;
+#X connect 3 2 2 0;
+#X connect 3 2 5 3;
+#X connect 4 0 34 0;
+#X connect 5 0 28 0;
+#X connect 6 0 5 0;
+#X connect 8 0 24 0;
+#X connect 9 0 25 0;
+#X connect 10 0 26 0;
+#X connect 11 0 27 0;
+#X connect 12 0 23 0;
+#X connect 23 0 1 0;
+#X connect 24 0 1 0;
+#X connect 25 0 1 0;
+#X connect 26 0 1 0;
+#X connect 27 0 1 0;
+#X connect 34 0 3 0;
+#X connect 35 0 4 0;
+#X coords 0 -1 1 1 120 140 1 100 100;
